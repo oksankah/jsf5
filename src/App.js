@@ -6,11 +6,13 @@ import HomePage from './pages/HomePage';
 import NewsPage from './pages/NewsPage';
 import LoginPage from './pages/LoginPage';
 import ProfilePage from './pages/ProfilePage';
+import ProductsPage from './pages/ProductsPage'; 
 
 const SiteHeader = ({ isAuth, onLogout }) => (
   <header className="site-header">
     <nav>
       <NavLink to="/">Головна</NavLink>
+      <NavLink to="/products">Товари</NavLink> 
       <NavLink to="/news">Новини</NavLink>
       <NavLink to="/profile">Профіль</NavLink>
     </nav>
@@ -43,6 +45,7 @@ function App() {
       <main className="content">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/products" element={<ProductsPage />} /> {/* 3. Додано маршрут */}
           <Route path="/news" element={<NewsPage />} />
           <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
           <Route 
