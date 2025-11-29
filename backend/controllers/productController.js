@@ -7,7 +7,7 @@ res.json(products);
 res.status(500).json({ message: err.message }); 
 } 
 };
-export const createProduct = async (req, res) => { 
+export const createProducts = async (req, res) => { 
 try { 
 const product = new Product(req.body); 
 await product.save(); 
